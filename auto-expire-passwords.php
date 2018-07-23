@@ -109,7 +109,7 @@ function mm_aep_handle_log_in( $user ) {
 	// Check if more than 90 days
 	if ( $diff >= $login_expiry ) {
 		// Create a login error
-		$user = new WP_Error( 'authentication_failed', sprintf( __( '<strong>ERROR</strong>:' . $lastReset . ' You must <a href="%s">reset your password</a>.', 'mm_aep' ), site_url( 'wp-login.php?action=lostpassword', 'login' ) ) );
+		$user = new WP_Error( 'authentication_failed', sprintf( __( '<strong>ERROR</strong>: You must <a href="%s">reset your password</a>.', 'mm_aep' ), site_url( 'wp-login.php?action=lostpassword', 'login' ) ) );
 	}
 
 	return $user;
